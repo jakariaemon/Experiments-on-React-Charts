@@ -6,12 +6,17 @@ import { Line } from "react-chartjs-2";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import TextField from "@mui/material/TextField";
 
-import OnClickComponent from "./onClickComponent";
 let dat = [50, 95, 99, 15, 56, 55, 40];
 
 var em = 200;
-
+const onAddBtnClick = (event) => {
+  var inval = document.getElementById("outlined-basic").value;
+  console.log(`Value of ${inval} clicked`);
+  alert(`${inval}Value of max in y clicked`);
+  return inval;
+};
 const da = [
   {
     firstname: "Jakaria",
@@ -96,9 +101,23 @@ export default function App() {
         />
         <Slider defaultValue={30} step={10} marks min={10} max={110} disabled />
       </Box>
+      <Box>
+        <TextField
+          id="outlined-basic"
+          label="Set Y Axix Maximum"
+          variant="outlined"
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            onAddBtnClick();
+          }}
+        >
+          SET
+        </Button>
+      </Box>
 
-      
-      <OnClickComponent />
       <Line data={data} legend={legend} options={options} />
     </div>
   );
