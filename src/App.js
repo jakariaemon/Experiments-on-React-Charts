@@ -8,7 +8,14 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 
-let dat = [50, 95, 99, 15, 56, 55, 40];
+let dat = [
+  { x: 10, y: 20 },
+  { x: 15, y: 50 },
+  { x: 20, y: 10 },
+  { x: 25, y: 30 },
+  { x: 30, y: 80 },
+  { x: 35, y: 90 }
+];
 
 var em = 200;
 const onAddBtnClick = (event) => {
@@ -17,17 +24,9 @@ const onAddBtnClick = (event) => {
   alert(`${inval}Value of max in y clicked`);
   return inval;
 };
-const da = [
-  {
-    firstname: "Jakaria",
-    lastname: "Emon",
-    email: "jakariaemo1521@sgmail.com"
-  },
-  { firstname: "t", lastname: "Sawada", email: "hdk@gmai.com" },
-  { firstname: "h", lastname: "anada", email: "hdk@gmail.com" }
-];
+
 const data = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  labels: ["10", "15", "20", "25", "30", "35"],
   datasets: [
     {
       label: "First dataset",
@@ -44,6 +43,7 @@ const data = {
     }
   ]
 };
+
 function valuetext(value) {
   return { value };
 }
@@ -81,7 +81,7 @@ export default function App() {
     <div className="App">
       <h1>React Line Chart with CSV</h1>
 
-      <CSVLink data={da}>
+      <CSVLink data={dat}>
         <Button variant="contained" color="primary">
           DownLoad CSV
         </Button>
