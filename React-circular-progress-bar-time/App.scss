@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+.mr-12{
+  margin-right: 12px;
+}
+.countdown{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.all-times-bar{
+  display: flex;
+  .timebox{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    .title{
+      font-weight: 100;
+    }
+  }
+}
+
+time{
+  font-weight: 200;
+}
+svg {
+  path {
+    &:nth-child(2) {
+      stroke-width: 2.7px;
+
+    }
+  }
+}
